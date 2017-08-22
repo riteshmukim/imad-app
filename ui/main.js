@@ -26,8 +26,7 @@ button.onclick = function(){
     
 };
 
-var nameInput = document.getElementById('name1');
-var nam = nameInput.value;
+
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
     var request = new XMLHttpRequest();
@@ -48,6 +47,8 @@ submit.onclick = function(){
             }
         }
     };
+    var nameInput = document.getElementById('name1');
+    var nam = nameInput.value;
     
     // Make the request
     request.open('GET','http://riteshmukim.imad.hasura-app.io/submit-name?name='+nam,true);
