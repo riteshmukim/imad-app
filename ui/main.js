@@ -24,10 +24,10 @@ button.onclick = function(){
     request.send(null);
     
     
-}
+};
 
 var nameInput = document.getElementById("name");
-var name = nameInput.value;
+var nam = nameInput.value;
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
     var request = new XMLHttpRequest();
@@ -44,13 +44,13 @@ submit.onclick = function(){
                     list+="<li>"+names[i]+"</li>";
                 }
                 var ul = document.getElementById("namelist");
-                ul.innerHTML = name;
+                ul.innerHTML = list;
             }
         }
     };
     
     // Make the request
-    request.open('GET','http://riteshmukim.imad.hasura-app.io/submit-name?name='+name,true);
+    request.open('GET','http://riteshmukim.imad.hasura-app.io/submit-name?name='+nam,true);
     request.send(null);
     
    
